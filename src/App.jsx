@@ -6,6 +6,7 @@ import Team from "./components/Team";
 import About from "./components/About";
 import { useState } from "react";
 import Accordion from "./components/Accordian";
+import Comments from "./components/comments/Comment";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -19,6 +20,7 @@ function App() {
           <a href="/about">About </a>
           <a href="/team">Team </a>
           <a href="/login">Login </a>
+          <a href="/comments">Comments</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en" className="bg-black text-white">
@@ -44,6 +46,7 @@ function App() {
             <Route path="/team" element={<Team />}></Route>
           </Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/comments" element={<Comments/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
