@@ -7,6 +7,7 @@ import About from "./components/About";
 import { useState } from "react";
 import Accordion from "./components/Accordian";
 import Comments from "./components/comments/Comment";
+import ImageSlider from "./components/image-Slider/ImageSlider";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -18,6 +19,7 @@ function App() {
           <a href="/">Home </a>
           <a href="/accordian">Accordian </a>
           <a href="/about">About </a>
+          <a href="/image-slider">Image Slider </a>
           <a href="/team">Team </a>
           <a href="/login">Login </a>
           <a href="/comments">Comments</a>
@@ -41,12 +43,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />}></Route>
           <Route path="/about" element={<About lang={lang} />}></Route>
+          <Route path="/image-slider" element={<ImageSlider />}></Route>
           <Route path="/accordian" element={<Accordion />}></Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/team" element={<Team />}></Route>
           </Route>
           <Route path="/login" element={<Login />}></Route>
-          <Route path="/comments" element={<Comments/>}></Route>
+          <Route path="/comments" element={<Comments />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
