@@ -9,6 +9,7 @@ import Accordion from "./components/Accordian";
 import Comments from "./components/comments/Comment";
 import ImageSlider from "./components/image-Slider/ImageSlider";
 import Pagination from "./components/pagination/Pagination";
+import LiveChat from "./components/live-chat/LiveChat";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -25,6 +26,7 @@ function App() {
           <a href="/login">Login </a>
           <a href="/pagination">Pagination</a>
           <a href="/comments">Comments</a>
+          <a href="/live-chat">LiveChat</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
           <option value="en" className="bg-black text-white">
@@ -53,6 +55,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/pagination" element={<Pagination />}></Route>
           <Route path="/comments" element={<Comments />}></Route>
+          <Route path="/live-chat" element={<LiveChat />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
