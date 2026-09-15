@@ -8,6 +8,7 @@ import { useState } from "react";
 import Accordion from "./components/Accordian";
 import Comments from "./components/comments/Comment";
 import ImageSlider from "./components/image-Slider/ImageSlider";
+import Pagination from "./components/pagination/Pagination";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -22,6 +23,7 @@ function App() {
           <a href="/image-slider">Image Slider </a>
           <a href="/team">Team </a>
           <a href="/login">Login </a>
+          <a href="/pagination">Pagination</a>
           <a href="/comments">Comments</a>
         </nav>
         <select value={lang} onChange={(e) => setLang(e.target.value)}>
@@ -49,6 +51,7 @@ function App() {
             <Route path="/team" element={<Team />}></Route>
           </Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/pagination" element={<Pagination />}></Route>
           <Route path="/comments" element={<Comments />}></Route>
         </Routes>
       </BrowserRouter>
